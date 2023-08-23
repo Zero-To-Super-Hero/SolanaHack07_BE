@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "9BizBSLYpxG1WfXonva/ScWnXj2Jd5OjCdNDYTwj+r4=",
+  "Source": "off_chain",
+  "BasePath": "_content/off_chain",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
