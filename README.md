@@ -34,9 +34,6 @@ This project makes use of the following technology
 - ....
 
 
-## Support
-
- Mentor: Phan Viết Thế
 
 
 ## Demo
