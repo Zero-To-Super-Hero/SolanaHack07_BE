@@ -147,7 +147,7 @@ namespace off_chain.Controllers
 
         private void CreatePasswordHash(string publicKey, out byte[] publicKeyHash, out byte[] publicKeySalt)
         {
-            using (var hmac = new HMACSHA256())
+            using (var hmac = new HMACSHA512())
             {
                 publicKeySalt = hmac.Key;
                 publicKeyHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(publicKey));
@@ -156,7 +156,7 @@ namespace off_chain.Controllers
 
         private bool VerifyPasswordHash(string publicKey, byte[] publicKeyHash, byte[] publicKeySalt)
         {
-            using (var hmac = new HMACSHA256(publicKeySalt))
+            using (var hmac = new HMACSHA512(publicKeySalt))
             {
                 var computedHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(publicKey));
                 return computedHash.SequenceEqual(publicKeyHash);
