@@ -1,6 +1,6 @@
 
 # Hi everyone. 👋👋👋👋
-# We are the 'Zero-To-Super-Hero' ༼ つ ◕‿◕ ༽つ
+# We are the 'Zero-To-Super-Hero' !!!
 
 
 
@@ -24,13 +24,15 @@ BE: Build a database and API center for calling and updating purchase status usi
 
 After our team finishes the BE, we will switch to working on the FE.
  
-## The technology used
+## Technology Used 
 
 This project makes use of the following technology
 
+- Candy Pay
+- Shyft
 - C#
+- ....
 
-- ...
 
 ## Support
 
