@@ -1,7 +1,7 @@
-# SolanaHack07_BE
 
-# Hi everyone. We are the 'Zero-To-Super-Hero' !!
-👋👋👋👋
+# Hi everyone. 👋👋👋👋
+# We are the 'Zero-To-Super-Hero' 
+
 
 
 ## 🚀 About My Team
@@ -32,9 +32,9 @@ This project makes use of the following technology
 
 - ...
 
-## Mentor 
+## Support
 
- Phan Viết Thế
+ Mentor: Phan Viết Thế
 
 
 ## Demo
@@ -48,5 +48,4 @@ Link demo: https://solana-hack07-90waw2yww-bapcai.vercel.app/
 
 
 ![Logo](https://scontent.fsgn5-5.fna.fbcdn.net/v/t39.30808-6/366632615_1669177740233611_2633911231662226355_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e3f864&_nc_ohc=7YWC_oA1zZUAX-YeNa0&_nc_ht=scontent.fsgn5-5.fna&oh=00_AfBkYo8pAFftbIed1PnaunkHcLF6NpR2qSOqUnXq5PSfKQ&oe=64EC8B27)
-
 
