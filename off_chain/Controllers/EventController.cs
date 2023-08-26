@@ -16,6 +16,11 @@ namespace off_chain.Controllers
         {
             _event = @event;
         }
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return Ok("sdsdsdsd");
+        }
         [HttpPost]
         public async Task <IActionResult> AddEvent(Event @event)
         {
