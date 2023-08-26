@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fguk+Bx9sZNA4YEvdKCl5u0TJnlnpgWUyQPqSqBGWDeZQlZ4opZCBTIy9ue8gSc52qL79YS0Os8a4zHcbvndjw==",
+  "dgSpecHash": "Q8aRoor0B2goYu7m+fdbhi8HQqhNQwUmodqsqGxQpHu1lIxUoFOIOMAJy/r2DQEcyeu+peFrAXBEBdDaaXIRxA==",
   "success": true,
-  "projectFilePath": "D:\\FPT Polytechnic\\hackathon\\bap-cai\\SolanaHack07_BE\\off_chain_new\\off_chain\\off_chain.csproj",
+  "projectFilePath": "D:\\FPT Polytechnic\\hackathon\\bap-cai\\SolanaHack07_BE\\off_chain\\off_chain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
