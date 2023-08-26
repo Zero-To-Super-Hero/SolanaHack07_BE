@@ -13,8 +13,7 @@ namespace off_chain.Models
         public string RefreshToken { get; set; } = string.Empty;
         public DateTime TokenCreated { get; set; }
         public DateTime TokenExpires { get; set; }
-        public ICollection<Payment> Payments { get; set; }
-        public ICollection<Event> Events { get; set; }
+        
 
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using off_chain.DBContext;
 using off_chain.Models;
 using off_chain.Services.UserService;
 using System.IdentityModel.Tokens.Jwt;
@@ -18,19 +19,15 @@ namespace off_chain.Controllers
         public static User user = new User();
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
+        private readonly MyDbContext _dbContext;
 
-        public AuthController(IConfiguration configuration, IUserService userService)
+        public AuthController(IConfiguration configuration, IUserService userService, MyDbContext dbContext)
         {
             _configuration = configuration;
             _userService = userService;
+            _dbContext = dbContext;
         }
 
-        [HttpGet, Authorize]
-        public ActionResult<string> GetMe()
-        {
-            var userName = _userService.GetMyName();
-            return Ok(userName);
-        }
 
         /// <summary>
         // Regis  for Cus
@@ -38,36 +35,31 @@ namespace off_chain.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
 
-        [HttpPost("register")]
-        public async Task<ActionResult<User>> Register(UserDto request)
+        //[HttpPost("register")]
+        //public async Task<ActionResult<User>> Register(UserDto request)
+        //{
+        //    CreatePasswordHash(request.PublicKey, out byte[] publicKeyHash, out byte[] publicKeySalt);
+
+        //    user.PublicKey = request.PublicKey;
+        //    user.PublicKeyHash = publicKeyHash;
+        //    user.PublicKeySalt = publicKeySalt;
+
+        //    return Ok(user);
+        //}
+
+        [HttpPost("login")]
+        public async Task<ActionResult<User>> Login(UserDto request)
         {
             CreatePasswordHash(request.PublicKey, out byte[] publicKeyHash, out byte[] publicKeySalt);
 
-            user.PublicKey = request.PublicKey;
-            user.PublicKeyHash = publicKeyHash;
-            user.PublicKeySalt = publicKeySalt;
-
-            return Ok(user);
-        }
-
-        [HttpPost("login")]
-        public async Task<ActionResult<string>> Login(UserDto request)
-        {
-            if (user.PublicKey != request.PublicKey)
-            {
-                return BadRequest("User not found.");
-            }
-
-            if (!VerifyPasswordHash(request.PublicKey, user.PublicKeyHash, user.PublicKeySalt))
-            {
-                return BadRequest("Wrong password.");
-            }
-
+                user.PublicKey = request.PublicKey;
+                user.PublicKeyHash = publicKeyHash;
+                user.PublicKeySalt = publicKeySalt;
             string token = CreateToken(user);
 
             var refreshToken = GenerateRefreshToken();
             SetRefreshToken(refreshToken);
-
+            //_dbContext.SaveChanges();
             return Ok(token);
         }
 
@@ -122,8 +114,7 @@ namespace off_chain.Controllers
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.PublicKey),
-                new Claim(ClaimTypes.Role, "Admin")
+                new Claim(ClaimTypes.Name, user.PublicKey)
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
