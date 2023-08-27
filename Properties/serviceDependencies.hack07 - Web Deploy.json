@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "apis2": {
+      "apiEndpoint": "https://offchainapi.azure-api.net/bapcai",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/offchainapi/apis/bapcai",
+      "type": "apis.azure"
+    }
+  }
+}

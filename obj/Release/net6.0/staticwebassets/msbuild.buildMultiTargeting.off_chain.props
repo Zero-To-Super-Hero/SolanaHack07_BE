@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\off_chain.props" />
+</Project>

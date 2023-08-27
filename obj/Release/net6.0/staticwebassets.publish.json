@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "YIa/uJckGi189zVO0rKua9N+b5RphysLrCZkeHZrSBw=",
+  "Source": "off_chain",
+  "BasePath": "_content/off_chain",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
